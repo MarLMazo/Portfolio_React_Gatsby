@@ -55,7 +55,9 @@ const Header = () => {
             </button>
           </p>
         </Fade>
+        <div className="waves"></div>
       </Container>
+      
     </section>
   );
 };
