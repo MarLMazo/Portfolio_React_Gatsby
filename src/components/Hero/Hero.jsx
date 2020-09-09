@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link, scroller } from 'react-scroll';
 import PortfolioContext from '../../context/context';
+import ReactTypingEffect from 'react-typing-effect';
 
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
@@ -36,9 +37,10 @@ const Header = () => {
           <h1 className="hero-title">
             {title || 'Hi, my name is'}{' '}
             <span className="text-color-main">{name || 'Your Name'}</span>
-            <br />
-            {subtitle || "I'm the Unknown Developer."}
           </h1>
+          <p className="hero-subtitle">
+            <ReactTypingEffect text={subtitle} speed="200" typingDelay="0" eraseDelay="1000"/>
+          </p>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
           <p className="hero-cta">
