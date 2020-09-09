@@ -4,6 +4,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Title from '../Title/Title';
 import AboutImg from '../Image/AboutImg';
 import PortfolioContext from '../../context/context';
+import Tilt from 'react-tilt';
 
 const About = () => {
   const { about } = useContext(PortfolioContext);
@@ -29,9 +30,23 @@ const About = () => {
         <Row className="about-wrapper">
           <Col md={6} sm={12}>
             <Fade bottom duration={1000} delay={600} distance="30px">
-              <div className="about-wrapper__image">
-                <AboutImg alt="profile picture" filename={img} />
-              </div>
+              <Tilt
+                options={{
+                  reverse: false,
+                  max: 8,
+                  perspective: 1000,
+                  scale: 1,
+                  speed: 300,
+                  transition: true,
+                  axis: null,
+                  reset: true,
+                  easing: 'cubic-bezier(.03,.98,.52,.99)',
+                }}
+              >
+                <div data-tilt className="about-wrapper__image">
+                  <AboutImg alt="profile picture" filename={img} />
+                </div>
+              </Tilt>
             </Fade>
           </Col>
           <Col md={6} sm={12}>
