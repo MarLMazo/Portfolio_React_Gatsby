@@ -3,15 +3,15 @@ import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link, scroller } from 'react-scroll';
 import PortfolioContext from '../../context/context';
-import ReactTypingEffect from 'react-typing-effect';
+import loadable from '@loadable/component'
 
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
-  const { title, name, subtitle, cta } = hero;
+  const { intro, name, subtitle, cta } = hero;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-
+  const ReactTypingEffect = loadable(()=>import('react-typing-effect'));
   useEffect(() => {
     if (window.innerWidth > 769) {
       setIsDesktop(true);
@@ -35,11 +35,11 @@ const Header = () => {
       <Container>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={500} distance="30px">
           <h1 className="hero-title">
-            {title || 'Hi, my name is'}{' '}
+            {intro || 'Hi, my name is'}{' '}
             <span className="text-color-main">{name || 'Your Name'}</span>
           </h1>
           <p className="hero-subtitle">
-            <ReactTypingEffect text={subtitle} speed="200" typingDelay="0" eraseDelay="300"/>
+            <ReactTypingEffect text={subtitle} speed="100" typingDelay="0" eraseDelay="1000"/>
           </p>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
