@@ -1,7 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import $ from 'jquery';
-import Popper from 'popper.js';
-import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Hero from './Hero/Hero';
 import About from './About/About';
 import Projects from './Projects/Projects';
