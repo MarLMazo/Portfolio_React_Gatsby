@@ -6,6 +6,7 @@
         position: fixed;
         line-height: 65px;
         text-align: center;
+        box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.4) inset;
         & a.navbar-brand{
             float: left;
             width: auto;
@@ -14,7 +15,7 @@
             font-size: 3rem;
         }
         & a.navbar-brand:hover{
-            color: #00E676;
+            color: $primary-color;
         }
         & div.navbar-collapse{
             justify-content: flex-end;     
@@ -22,8 +23,8 @@
                 padding-right: 1em;
             }
             & li a:hover{
-                color: #00E676;
-            }
+                color: $primary-color;
+            }           
         }
         &.navbar{
             padding: 0;
@@ -80,17 +81,30 @@
 }
 @media (max-width: 991px){
     #header{
-        & .navbar-collapse{
-            margin-top: -6px;
-            background-color: #F8F9FA;
+        nav{
+            & .navbar-collapse{
+                margin-top: -13px;
+                background-color: #F8F9FA;
+            }
+            & .form-control{
+                width: 100%;
+            }
+            & form input{
+                margin-bottom: 1rem;
+            }
+            li:hover{
+                border-bottom: 5px solid $primary-color;
+                border-image-slice: 1;
+                border-image-source: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%)
+            }
+            & div.navbar-collapse{
+                justify-content: flex-end;     
+                & li{
+                    padding-right: 0;
+                }
+            }
         }
-        & .form-control{
-            width: 100%;
-        }
-        & form input{
-            margin-bottom: 1rem;
-        }
-
+        
     }
 }
 

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
 
@@ -7,30 +7,46 @@ import PortfolioContext from '../../context/context';
 const Header = () => {
   const { header } = useContext(PortfolioContext);
   const {logo, menus} = header;
+  const [iconToggle, seticonToggle]= useState(true);
 
+  const toggleIcon = () =>{
+    seticonToggle(!iconToggle);
+  }
+  
   return (
     <header id="header" className="header">
-      <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-        {/* <a className="navbar-brand" href="#">{(img !== null || img !== '') ? <img src={img} alt="image alt" /> : title}</a> */}
-        <Link className="navbar-brand" to='hero' smooth duration={1000}>MarLMazo</Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <Navbar sticky="top" expand="lg" bg="light" variant="light">
+         {/* <a className="navbar-brand" href="#">{(img !== null || img !== '') ? <img src={img} alt="image alt" /> : title}</a>  */}
+        <Navbar.Brand>
+          <Link className="navbar-brand" to='hero' smooth duration={1000}>MarLMazo</Link>
+        </Navbar.Brand>
+        <Navbar.Toggle className={(iconToggle) ? "navbar-toggler" : "navbar-toggler active"} onClick={toggleIcon} aria-controls="basic-navbar-nav" >
+          <span className="toggle-icon"></span>
+          <span className="toggle-icon"></span>
+          <span className="toggle-icon"></span>
+        </Navbar.Toggle>
+        <Navbar.Collapse>
           <ul className="navbar-nav">
-          {menus && menus.map((menu, index)=>{
-                    const {title, location} = menu;
-                    return(
-                        <li key={index} className="nav-item active"><Link className="nav-link" to={location} smooth duration={1000}>{title}</Link></li>
-                    )
-                    })}  
-          </ul>
-          {/* <form className="form-inline my-2 my-lg-0">
+            {menus && menus.map((menu, index)=>{
+                      const {title, location, samePage} = menu;
+                      if(samePage){
+                        return(
+                          <li key={index} className="nav-item"><Link className="nav-link" to={location} smooth duration={1000}>{title}</Link></li>
+                        )
+                      }else{
+                        return(
+                          <li key={index} className="nav-item"><a href={location} className="nav-link">{title}</a></li >
+                        )       
+                      }
+                      
+                      })}  
+            </ul>
+           {/* <form className="form-inline my-2 my-lg-0">
             <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
             <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
           </form> */}
-        </div>
-      </nav>
+        </Navbar.Collapse >
+      </Navbar> 
     
 
     </header>
