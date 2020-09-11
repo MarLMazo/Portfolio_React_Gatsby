@@ -39,7 +39,7 @@ const Header = () => {
             <span className="text-color-main">{name || 'Your Name'}</span>
           </h1>
           <p className="hero-subtitle">
-            <ReactTypingEffect text={subtitle} speed="200" typingDelay="0" eraseDelay="1000"/>
+            <ReactTypingEffect text={subtitle} speed="200" typingDelay="0" eraseDelay="300"/>
           </p>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
