@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&family=Montserrat&display=swap');
 
 h1 {
   font-weight: 700;
@@ -25,6 +25,7 @@ a:hover {
 .section-title {
   margin: 0px;
   margin-bottom: 4.5rem;
+  // font-family: 'IM Fell Great Primer SC', 'Montserrat', sans-serif;
   font-size: $big-font-size;
   font-weight: bold;
   text-transform: uppercase;
@@ -32,6 +33,9 @@ a:hover {
   @include respond(phone) {
     font-size: 2.8rem;
   }
+}
+.navbar-brand{
+  font-family: 'IM Fell Great Primer SC', 'Montserrat', sans-serif;
 }
 
 .dark-blue-text {
