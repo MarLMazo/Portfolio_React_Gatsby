@@ -6,15 +6,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/main.scss';
 
 export default () => {
-  const { title, lang, description } = headData;
+  const { title, lang, description, author, keywords } = headData;
 
   return (
     <>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>{title || 'Gatsby Simplefolio'}</title>
+        <title>{title || 'Simple Portfolio'}</title>
         <html lang={lang || 'en'} />
-        <meta name="description" content={description || 'Gatsby Simplefolio'} />
+        <meta name="description" content={description || 'Simple Portfolio'} />
+        <meta name="author" content={author || 'Unknown'} />
+        <meta name="keywords" content={keywords || 'Portfolio, portfolio reactjs, gatsbyjs'} />
       </Helmet>
       <App />
     </>
