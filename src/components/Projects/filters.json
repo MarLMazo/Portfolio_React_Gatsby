@@ -1,0 +1,7 @@
+[
+  { "label": "all", "isChecked": true },
+  { "label": "frontend", "isChecked": false },
+  { "label": "fullstack", "isChecked": false },
+  { "label": "wordpress", "isChecked": false }
+
+]
