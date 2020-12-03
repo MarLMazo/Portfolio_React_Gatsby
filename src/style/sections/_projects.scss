@@ -8,7 +8,41 @@
     margin-top: 0;
     padding-top: 5rem;
   }
+  .filter-container{
+    display: flex;
+    justify-content: center;
+    font-size: 1.25rem;
 
+    &>div{
+      display: flex;
+      text-transform: uppercase;
+      align-items: center;
+      margin: 0 0.5rem;
+
+      & label{
+        margin: 0 0.2rem;
+      }
+    }
+  }
+  .filter-proj-container > div{
+    
+    // display: flex;
+    // flex-flow: row wrap !important;
+    // justify-content: space-between;
+
+    .proj-card {
+      margin: 0.5rem;
+      padding: 2.5rem;
+      overflow: hidden;
+      left: auto !important;
+      top: auto !important;  
+      transform: initial !important;
+      position: relative !important;
+      // flex: 1 0 33.33%;
+    }
+  }
+
+  
   .project-wrapper {
     margin-bottom: 15rem;
 
