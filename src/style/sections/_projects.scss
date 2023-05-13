@@ -20,16 +20,23 @@
       margin: 0 0.5rem;
 
       & label{
-        margin: 0 0.2rem;
+        margin: 1rem 0.4rem;
+        padding: 1rem;
+        vertical-align: middle;
+        font-weight: bold;
+      }
+      & input{
+        display: none;
+      }
+      & input:checked + label{
+        color: $dark-blue-text;
+        border-bottom: 5px solid #00b09b;
+        padding-bottom: -5px;
       }
     }
   }
   .filter-proj-container > div{
-    
-    // display: flex;
-    // flex-flow: row wrap !important;
-    // justify-content: space-between;
-
+  
     .proj-card {
       margin: 0.5rem;
       padding: 2.5rem;

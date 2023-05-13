@@ -8,7 +8,14 @@ import Header from './Header/Header';
 
 import { PortfolioProvider } from '../context/context';
 
-import { heroData, aboutData, projectsData, contactData, footerData, headerData } from '../mock/data';
+import {
+  heroData,
+  aboutData,
+  projectsData,
+  contactData,
+  footerData,
+  headerData,
+} from '../mock/data';
 
 function App() {
   const [hero, setHero] = useState({});
@@ -21,10 +28,12 @@ function App() {
   useEffect(() => {
     setHero({ ...heroData });
     setAbout({ ...aboutData });
+
     setProjects([...projectsData]);
+    // console.log(projects);
     setContact({ ...contactData });
     setFooter({ ...footerData });
-    setHeader({...headerData});
+    setHeader({ ...headerData });
   }, []);
 
   return (
