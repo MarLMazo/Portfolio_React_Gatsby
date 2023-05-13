@@ -45,11 +45,6 @@ const Projects = () => {
       })
     );
   };
-  // const stringToHTML = (str) =>{
-  //   let parser = new DOMParser();
-  //   let doc = parser.parseFromString(str, 'text/html');
-  //   return doc.body;
-  // };
 
   return (
     <section id="projects">
@@ -74,9 +69,9 @@ const Projects = () => {
             {projects && (
               <IsotopeGrid gridLayout={projects} filters={filtered}>
                 {projects.map((project) => {
-                  const { title, info, info2, url, repo, img, technologies, filter } = project;
+                  const { title, info, info2, url, repo, img, id, technologies, filter } = project;
                   return (
-                    <div className={`proj-card card ${filter}`}>
+                    <div key={id} className={`proj-card card ${filter}`}>
                       <Row>
                         <Col lg={4} sm={12}>
                           <Fade
@@ -99,7 +94,7 @@ const Projects = () => {
                               </div>
                               <p>
                                 {technologies.map((tech) => (
-                                  <span> {tech} |</span>
+                                  <span key={`proj-${tech}`}> {tech} |</span>
                                 ))}
                               </p>
                               <div>{}</div>

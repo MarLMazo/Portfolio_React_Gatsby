@@ -24,13 +24,12 @@ function App() {
   const [contact, setContact] = useState({});
   const [footer, setFooter] = useState({});
   const [header, setHeader] = useState({});
-
   useEffect(() => {
     setHero({ ...heroData });
     setAbout({ ...aboutData });
 
     setProjects([...projectsData]);
-    // console.log(projects);
+
     setContact({ ...contactData });
     setFooter({ ...footerData });
     setHeader({ ...headerData });

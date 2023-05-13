@@ -38,7 +38,7 @@ const Header = () => {
                 const { title, location, samePage } = menu;
                 if (samePage) {
                   return (
-                    <li className="nav-item">
+                    <li key={`menu-${title}`} className="nav-item">
                       <Link className="nav-link" to={location} smooth duration={1000}>
                         {title}
                       </Link>
