@@ -42,7 +42,7 @@ export const heroData = {
   intro: '',
   name: 'MarL Mazo',
   subtitle: [
-    'A Junior Web Developer',
+    'A Front End Developer',
     'Love Coding',
     'Focus on Learning',
     'Love to play games and watch anime',
@@ -54,7 +54,7 @@ export const heroData = {
 export const aboutData = {
   img: 'profile.JPEG',
   paragraphOne:
-    "I am a junior web developer that graduated from Humber College with Web Development Program. I'm passionate about coding and I am interested in re-creating online web technology projects. It's really fun to watch how this kind of stuff helps businesses and people make life easier",
+    "I am a web developer that graduated from Humber College with Web Development Program. I'm passionate about coding and I am interested in re-creating online web technology projects. It's really fun to watch how this kind of stuff helps businesses and people make life easier",
   paragraphTwo:
     'I find coding is fun by building and creating solutions to problems. I love the challenges I face when bugs and errors occur to my project, and I always open to a different/simplified approach to solving a problem.',
   paragraphThree: ' ',
