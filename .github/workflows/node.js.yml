@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -27,5 +27,7 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - name: Step 3 - Use the Upload Artifact GitHub Action
-      uses: actions/upload-artifact@v2
-    
+      uses: actions/upload-artifact@v3
+      with:
+            name: build-folder
+            path: public
