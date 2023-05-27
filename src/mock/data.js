@@ -58,7 +58,7 @@ export const aboutData = {
   paragraphTwo:
     'I find coding is fun by building and creating solutions to problems. I love the challenges I face when bugs and errors occur to my project, and I always open to a different/simplified approach to solving a problem.',
   paragraphThree: ' ',
-  resume: '/resume.pdf', // if no resume, the button will not show up
+  resume: 'https://docs.google.com/document/d/1o7CVu3sDhUnoSzKk0S4EsxzYrDZycU0h1TNdWMt1Qlc/view', // if no resume, the button will not show up
 };
 
 // PROJECTS DATA
