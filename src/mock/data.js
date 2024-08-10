@@ -72,7 +72,7 @@ export const projectsData = [
       'I created this Project to learn more about Material UI. I fetch data on Lorem Picsum and create a simple gallery using their API. It has Lazy loading on images and a pagination for upto 10 pages.',
     technologies: ['ReactJS', 'Material-UI'],
     filter: ['all', 'frontend'],
-    url: 'http://react-gallery.mdmazo.com/',
+    url: 'http://react-gallery.mdmazo.online/',
     repo: 'https://github.com/MarLMazo/react-image-gallery', // if no repo, the button will not show up
   },
   {
@@ -84,7 +84,7 @@ export const projectsData = [
       'This project is one of my biggest achievements in web development as it was a music web application and I was the one who makes sure that this project works as I was assigned to do the music functionality.',
     technologies: ['PHP', 'JQuery', 'JavaScript', 'CSS', 'HTML'],
     filter: ['all', 'fullstack'],
-    url: 'http://soundly.mdmazo.com/',
+    url: 'http://soundly.mdmazo.online/',
     repo: 'https://github.com/MarLMazo/soundly', // if no repo, the button will not show up
   },
   {
@@ -96,7 +96,7 @@ export const projectsData = [
       'Created Child Themes to customize the look of the pages. Added also login page and register page and customizing it using the CSS styling.',
     technologies: ['WordPress', 'WooCommerce', 'JQuery', 'JavaScript', 'CSS', 'HTML'],
     filter: ['all', 'wordpress'],
-    url: 'http://wordpress-ecommerce.mdmazo.com/',
+    url: 'http://wordpress-ecommerce.mdmazo.online/',
     repo: '', // if no repo, the button will not show up
   },
   {
@@ -107,7 +107,7 @@ export const projectsData = [
     info2: 'Website is created using ReactJS and NodeJS ',
     technologies: ['ReactJS', 'NodeJS', 'OpenWeather API'],
     filter: ['all', 'frontend'],
-    url: 'http://weather.mdmazo.com/',
+    url: 'http://weather.mdmazo.online/',
     repo: 'https://github.com/MarLMazo/Weather_App', // if no repo, the button will not show up
   },
   {
@@ -119,7 +119,7 @@ export const projectsData = [
       'The pure CSS animation Project. I worked on this to create a CSS animation game. I only use JavaScript in order to move some elements randomly and keep track of the scores of the monster he/she clicked. This is pure CSS animation.',
     technologies: ['HTML', 'CSS3', 'JavaScript'],
     filter: ['all', 'frontend'],
-    url: 'http://cssanimation.mdmazo.com/',
+    url: 'http://cssanimation.mdmazo.online/',
     repo: 'https://github.com/MarLMazo/CssGameAnimation', // if no repo, the button will not show up
   },
   {
@@ -154,7 +154,7 @@ export const projectsData = [
     info2: 'Create a interactive and modern design to promote the wedding venue of the client',
     technologies: ['WordPress', 'PHP', 'JavaScript', 'CSS'],
     filter: ['all', 'cms'],
-    url: 'http://wedding.mdmazo.com/',
+    url: '',
     repo: '', // if no repo, the button will not show up
   },
 ];
